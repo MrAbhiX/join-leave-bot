@@ -18,6 +18,6 @@ Abhi = Client(os.environ["SESSION_NAME"],
 
 
 
-Abhi.start()
+Abhi.run()
 print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
