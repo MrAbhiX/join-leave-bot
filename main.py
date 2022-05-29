@@ -9,20 +9,15 @@ OWNER_ID = list(
 
 Abhi = Client(os.environ["SESSION_NAME"], 
                int(os.environ["API_ID"]), 
-               os.environ["API_HASH"])
+               os.environ["API_HASH"],
+               plugins=dict(root="Userbot"),
+              )
 
 
 
-bot = Client(
-    "userbot Join-Leave Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    plugins=dict(root="Userbot"),
-)
 
-await bot.start()
-print("[INFO]: BOT & USERBOT CLIENT STARTED !!")
+
+
 await Abhi.start()
 print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
