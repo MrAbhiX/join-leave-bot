@@ -1,6 +1,6 @@
 import os
 
-from pyrogram import Client
+from pyrogram import Client, idle
 
 OWNER_ID = list(
     map(int, os.getenv("OWNER_ID", "").split())
@@ -23,3 +23,4 @@ bot = Client(
 
 Abhi.start()
 bot.run()
+idle()
