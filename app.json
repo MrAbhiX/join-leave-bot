@@ -5,6 +5,10 @@
   "logo": "https://telegra.ph/file/4c03ff6d25fc678a2fe08.jpg",
   "repository": "https://github.com/TG-TeamIndia/IndianMusicBot",
   "env": {
+    "SESSION_NAME": {
+      "description": "Pyrogram session string",
+      "required": true
+    },
     "BOT_TOKEN": {
       "description": "A bot token from @BotFather",
       "required": true
