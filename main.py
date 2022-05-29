@@ -1,5 +1,5 @@
 import os
-
+import asyncio
 from pyrogram import Client, idle
 
 OWNER_ID = list(
@@ -21,6 +21,11 @@ bot = Client(
     plugins=dict(root="Userbot"),
 )
 
-Abhi.start()
-bot.start()
+async def start_bot():
+    await bot.start()
+    print("[INFO]: BOT & USERBOT CLIENT STARTED !!")
+    await Abhi.start()
+    print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_bot())
