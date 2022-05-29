@@ -1,16 +1,15 @@
 from pyrogram import Client, filters
-from main import command
+
 from pyrogram.errors import UserAlreadyParticipant
-from decoraters import authorized_users_only, errors
+
 import asyncio
 from main import Abhi
 
 
 
-@Client.on_message(command("join") & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command("join") & ~filters.private & ~filters.bot)
 
-@authorized_users_only
-@errors
+
 async def join_group(client, message):
     semx = message.chat.id
     try:
