@@ -2,6 +2,10 @@ import os
 
 from pyrogram import Client
 
+OWNER_ID = list(
+    map(int, os.getenv("OWNER_ID", "").split())
+) 
+
 
 Abhi = Client(os.environ["SESSION_NAME"], 
                int(os.environ["API_ID"]), 
