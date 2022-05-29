@@ -27,5 +27,3 @@ async def start_bot():
     await Abhi.start()
     print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(start_bot())
