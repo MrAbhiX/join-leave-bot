@@ -7,17 +7,13 @@ OWNER_ID = list(
 ) 
 
 
-Abhi = Client(os.environ["SESSION_NAME"], 
-               int(os.environ["API_ID"]), 
-               os.environ["API_HASH"],
-               plugins=dict(root="Userbot"),
-              )
+abhi = Client(
+    api_id=API_ID,
+    api_hash=API_HASH,
+    session_name=SESSION_NAME,
+    plugins=dict(root="Userbot")
+    )
 
-
-
-
-
-
-Abhi.start()
+abhi.start()
 print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
