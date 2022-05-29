@@ -23,4 +23,4 @@ bot = Client(
 
 Abhi.start()
 bot.start()
-idle()
+
