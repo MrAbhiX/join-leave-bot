@@ -22,5 +22,5 @@ bot = Client(
 )
 
 Abhi.start()
-bot.run()
+bot.start()
 idle()
