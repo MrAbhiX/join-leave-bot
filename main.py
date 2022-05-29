@@ -1,6 +1,7 @@
 import os
 from os import environ
 import asyncio
+from asyncio import get_event_loop
 import aiohttp
 from Python_ARQ import ARQ
 from pyrogram import Client, idle
