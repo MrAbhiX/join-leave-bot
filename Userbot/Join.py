@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 
 import asyncio
-from main import Abhi
+from main import abhi
 
 
 
@@ -21,12 +21,12 @@ async def join_group(client, message):
         return
 
     try:
-        user = await Abhi.get_me()
+        user = await abhi.get_me()
     except:
         user.first_name = "abhi userbot"
 
     try:
-        await Abhi.join_chat(invitelink)
+        await abhi.join_chat(invitelink)
     except UserAlreadyParticipant:
         pass
     except Exception as e:
