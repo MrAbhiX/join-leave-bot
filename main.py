@@ -21,9 +21,8 @@ bot = Client(
     plugins=dict(root="Userbot"),
 )
 
-async def start_bot():
-    await bot.start()
-    print("[INFO]: BOT & USERBOT CLIENT STARTED !!")
-    await Abhi.start()
-    print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
+await bot.start()
+print("[INFO]: BOT & USERBOT CLIENT STARTED !!")
+await Abhi.start()
+print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
 
