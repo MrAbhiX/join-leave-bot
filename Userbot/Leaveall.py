@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
 from main import OWNER_ID
-from main import Abhi
+from main import abhi
 
 
 @Client.on_message(filters.command(["userbotleaveall", "leaveall"]) & filters.user(OWNER_ID))
@@ -12,9 +12,9 @@ async def leaveall(client, message):
     left = 0
     failed = 0
     lol = await message.reply("Assistant Leaving all chats")
-    async for dialog in Abhi.iter_dialogs():
+    async for dialog in abhi.iter_dialogs():
         try:
-            await Abhi.leave_chat(dialog.chat.id)
+            await abhi.leave_chat(dialog.chat.id)
             left += 1
             await lol.edit(
                 f"Assistant leaving all group... \n\nLeft: {left} chats. Failed: {failed} chats."
